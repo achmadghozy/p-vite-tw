@@ -32,7 +32,7 @@ function CompHeader() {
             className="cursor-pointer 
                     hover:underline font-medium"
           >
-            <h2>{item.name}</h2>
+            <h2 className="text-gray-500 dark:text-white">{item.name}</h2>
           </div>
         ))}
       </div>

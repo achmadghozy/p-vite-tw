@@ -18,7 +18,7 @@ function Introduction() {
         ACHMAD <br></br>GHOZY
       </h2>
       <img
-        src="/avatar.jpg"
+        src="/profilepic.jpg"
         className="w-[160px] h-[160xp] bg-gray-200 p-7 rounded-full"
       />
     </div>
@@ -42,33 +42,25 @@ function AboutMe() {
   );
 }
 
-function ProfilePic() {
-  return (
-    <div className="fixed mt-[90px]">
-      <img src="/user-image.png" className="h-screen object-cover w-screen" />
-    </div>
-  );
-}
-
 function Speciality() {
   const servicesList = [
     {
       id: 1,
       title: Strings.FRONTED,
       desc: Strings.FRONTED_DESC,
-      logo: "../assets/web-design.png",
+      logo: "/web-design.png",
     },
     {
       id: 2,
       title: Strings.BACKEND,
       desc: Strings.BACKEND_DESC,
-      logo: "../assets/backend_coding.png",
+      logo: "/backend-coding.png",
     },
     {
       id: 3,
       title: Strings.PT_TITLE,
       desc: Strings.PT_DESC,
-      logo: "../muscle.png",
+      logo: "/muscle.png",
     },
   ];
   return (

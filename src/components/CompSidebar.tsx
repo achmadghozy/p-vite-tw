@@ -1,9 +1,4 @@
-import {
-  IoLogoGithub,
-  IoLogoYoutube,
-  IoLogoLinkedin,
-  IoLogoDribbble,
-} from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin, IoLogoDribbble } from "react-icons/io5";
 
 function CompSidebar() {
   return (
