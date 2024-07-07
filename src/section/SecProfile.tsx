@@ -1,7 +1,6 @@
 import Strings from "../string/String";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import { IoArrowForwardOutline } from "react-icons/io5";
-import String from "../string/String";
 
 function Introduction() {
   return (
@@ -12,7 +11,7 @@ function Introduction() {
         className="mt-5 text-black font-medium text-[13px]
         tracking-widest"
       >
-        {String.GREETINGS}
+        {Strings.GREETINGS}
       </h2>
       <h2 className="text-[70px] font-bold text-black tracking-widest mt-5">
         ACHMAD <br></br>GHOZY
@@ -99,12 +98,74 @@ function Speciality() {
   );
 }
 
+function WorkExperience() {
+  const listExperience = [
+    {
+      id: 1,
+      company: Strings.JOB_EPSON_NAME,
+      company_logo: "/epson-2.svg",
+      position: Strings.JOB_EPSON_TITLE,
+      job_start_m: Strings.JOB_EPSON_JOIN_MONTH,
+      job_start_y: Strings.JOB_EPSON_JOIN_YEAR,
+    },
+    {
+      id: 2,
+      company: Strings.JOB_TDS_NAME,
+      company_logo: "TDS_logo.jpg",
+      position: Strings.JOB_TDS_TITLE,
+      job_start_m: Strings.JOB_TDS_JOIN_MONTH,
+      job_start_y: Strings.JOB_TDS_JOIN_YEAR,
+    },
+  ];
+  return (
+    <div className="px-12 mt-12">
+      <div className="flex items-center">
+        <div className="w-[20px] h-[7px] bg-green-600 rounded-full"></div>
+        <div className="w-full border-[1px] mx-4 mt-[-2px]"></div>
+        <h2 className="text-[24px] font-bold">{Strings.EXPERIENCE}</h2>
+        <div className="w-full border-[1px] mt-[-2px] mx-4"></div>
+        <div className="w-[20px] h-[7px] bg-green-600 rounded-full"></div>
+      </div>
+      
+      <div className="flex justify-around mt-16">
+        {listExperience.map((item) => (
+          <div className="flex flex-col w-full">
+            <div className="col-span-1">
+              <div className="bg-white rounded-full w-[80px] h-[80px] col-span-1">
+                <img
+                  src={item.company_logo}
+                  className="w-[80px] h-[80px]
+                    p-5 hover:scale-110 transition-all cursor-pointer"
+                />
+              </div>
+            </div>
+            <div className="col-span-4">
+              <h2 className="mt-5 font-bold">{item.company}</h2>
+              <h2 className="mt-5 font-bold">{item.position}</h2>
+              <h2 className="text-gray-400">{item.job_start_m}</h2>
+            </div>
+            <div className="col-span-1">
+              <IoArrowForwardOutline
+                className="bg-green-500 text-[35px]
+                  p-2 text-white rounded-full cursor-pointer hover:scale-110
+                  transition-all"
+              />
+            </div>
+          </div>
+        </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function SecProfile() {
   return (
     <div>
       {Introduction()}
       {AboutMe()}
       {Speciality()}
+      {WorkExperience()}
     </div>
   );
 }

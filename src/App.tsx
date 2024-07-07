@@ -10,7 +10,7 @@ function App() {
       <CompHeader />
       <CompSidebar />
       <div className="ml-[90px] grid grid-cols-1 md:grid-cols-3">
-        <div className="col-span-2 p-5 mt-[90px]">
+        <div className="col-span-3 p-5 mt-[90px]">
           <SecProfile />
         </div>
         <div className="hidden md:block">
