@@ -8,17 +8,17 @@ function Introduction() {
       <div className="h-[120px] border-r-[1px] mt-[-20px]" />
       <div className="w-[5px] h-[5px] bg-green-600 rounded-full"></div>
       <h2
-        className="mt-5 text-black font-medium text-[13px]
+        className="mt-5 text-white font-medium text-[13px]
         tracking-widest"
       >
         {Strings.GREETINGS}
       </h2>
-      <h2 className="text-[70px] font-bold text-black tracking-widest mt-5">
-        ACHMAD <br></br>GHOZY
+      <h2 className="text-[70px] font-bold text-white tracking-widest mt-5 justify-center text-center">
+        ACHMAD GHOZY
       </h2>
       <img
         src="/profilepic.jpg"
-        className="w-[160px] h-[160xp] bg-gray-200 p-7 rounded-full"
+        className="w-[160px] h-[160xp] bg-gray-200 p-7 rounded-full mt-5"
       />
     </div>
   );
@@ -57,9 +57,9 @@ function Speciality() {
     },
     {
       id: 3,
-      title: Strings.PT_TITLE,
-      desc: Strings.PT_DESC,
-      logo: "/muscle.png",
+      title: Strings.FULLSTACK,
+      desc: Strings.FULLSTACK_DESC,
+      logo: "/computer.png",
     },
   ];
   return (
@@ -126,11 +126,11 @@ function WorkExperience() {
         <div className="w-full border-[1px] mt-[-2px] mx-4"></div>
         <div className="w-[20px] h-[7px] bg-green-600 rounded-full"></div>
       </div>
-      
-      <div className="flex justify-around mt-16">
+
+      <div className="flex justify-around mt-5 flex-col">
         {listExperience.map((item) => (
-          <div className="flex flex-col w-full">
-            <div className="col-span-1">
+          <div className="grid grid-cols-6 gap-1 w-full mt-10">
+            <div className="col-span-1 content-center">
               <div className="bg-white rounded-full w-[80px] h-[80px] col-span-1">
                 <img
                   src={item.company_logo}
@@ -140,11 +140,11 @@ function WorkExperience() {
               </div>
             </div>
             <div className="col-span-4">
-              <h2 className="mt-5 font-bold">{item.company}</h2>
-              <h2 className="mt-5 font-bold">{item.position}</h2>
+              <h2 className="font-bold">{item.company}</h2>
+              <h2 className="font-bold">{item.position}</h2>
               <h2 className="text-gray-400">{item.job_start_m}</h2>
             </div>
-            <div className="col-span-1">
+            <div className="col-span-1 content-center">
               <IoArrowForwardOutline
                 className="bg-green-500 text-[35px]
                   p-2 text-white rounded-full cursor-pointer hover:scale-110
@@ -152,7 +152,6 @@ function WorkExperience() {
               />
             </div>
           </div>
-        </div>
         ))}
       </div>
     </div>

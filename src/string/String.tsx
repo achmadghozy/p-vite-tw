@@ -15,6 +15,10 @@ export default {
   BACKEND_DESC:
     "Developing application backend and Server side development using various backend technology",
 
+  FULLSTACK: "FULLSTACK DEV",
+  FULLSTACK_DESC:
+    "Develop and deploy progressive web-app & web-app with various stack and latest technologies",
+
   GREETINGS: "HELLO! MY NAME IS",
   FIRST_NAME: "ACHMAD",
   MID_NAME: "GHOZY",
@@ -24,14 +28,14 @@ export default {
     "Let's achieve that bodygoals of yours!. Coaching your training, fitness, and dietary ",
 
   JOB_EPSON_NAME: "EPSON Indonesia",
-  JOB_EPSON_TITLE: "Experienced Software Engineer",
+  JOB_EPSON_TITLE: "Middle Software Engineer",
   JOB_EPSON_JOIN_MONTH: "DECEMBER",
   JOB_EPSON_JOIN_YEAR: "2020",
   JOB_EPSON_END_MONTH: "",
   JOB_EPSON_END_YEAR: "",
 
   JOB_TDS_NAME: "TDS Tech",
-  JOB_TDS_TITLE: "Software Engineer",
+  JOB_TDS_TITLE: "Junior Software Engineer",
   JOB_TDS_JOIN_MONTH: "MARCH",
   JOB_TDS_JOIN_YEAR: "2020",
   JOB_TDS_END_MONTH: "SEPT",
