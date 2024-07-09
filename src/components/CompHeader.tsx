@@ -1,3 +1,5 @@
+import { useState, useRef } from "react";
+
 function CompHeader() {
   const menu = [
     {
@@ -17,13 +19,22 @@ function CompHeader() {
       name: "CONTACT",
     },
   ];
+
+  const childRef = useRef(0);
+  const [ActiveMenu, setActiveMenu] = useState(0);
+
+  function clickHandler({ number: id }) {
+    setActiveMenu(id);
+    setActiveMenu(childRef.current);
+  }
+
   return (
     <div className="flex items-center fixed w-full justify-between border-b-[1px] bg-white dark:bg-gray-400">
       <div
         className="w-[90px] h-[90px]
             bg-black"
       >
-        <img src="/logo.png" className="p-7" />
+        <img src="/react.svg" className="p-7" />
       </div>
       <div className="hidden md:flex gap-14">
         {menu.map((item, index) => (
@@ -31,6 +42,7 @@ function CompHeader() {
             key={index}
             className="cursor-pointer 
                     hover:underline font-medium"
+            onClick={() => setActiveMenu(item.id)}
           >
             <h2 className="text-gray-500 dark:text-white">{item.name}</h2>
           </div>
