@@ -1,6 +1,6 @@
-import { useState, useRef } from "react";
+import { useState, forwardRef } from "react";
 
-function CompHeader() {
+const CompHeader = forwardRef(function (ref) {
   const menu = [
     {
       id: 1,
@@ -20,13 +20,7 @@ function CompHeader() {
     },
   ];
 
-  const childRef = useRef(0);
-  const [ActiveMenu, setActiveMenu] = useState(0);
-
-  function clickHandler({ number: id }) {
-    setActiveMenu(id);
-    setActiveMenu(childRef.current);
-  }
+  const [ActiveMenu, setActiveMenu] = useState(ref);
 
   return (
     <div className="flex items-center fixed w-full justify-between border-b-[1px] bg-white dark:bg-gray-400">
@@ -44,6 +38,7 @@ function CompHeader() {
                     hover:underline font-medium"
             onClick={() => setActiveMenu(item.id)}
           >
+            {ref === ActiveMenu}
             <h2 className="text-gray-500 dark:text-white">{item.name}</h2>
           </div>
         ))}
@@ -69,6 +64,6 @@ function CompHeader() {
       </div>
     </div>
   );
-}
+});
 
 export default CompHeader;
