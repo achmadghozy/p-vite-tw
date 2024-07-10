@@ -21,6 +21,7 @@ const CompHeader = forwardRef(function (ref) {
   ];
 
   const [ActiveMenu, setActiveMenu] = useState(ref);
+  let MenuTemp: number;
 
   return (
     <div className="flex items-center fixed w-full justify-between border-b-[1px] bg-white dark:bg-gray-400">
@@ -37,9 +38,10 @@ const CompHeader = forwardRef(function (ref) {
             className="cursor-pointer 
                     hover:underline font-medium"
             onClick={() => setActiveMenu(item.id)}
+            ref={this.ActiveMenu}
           >
-            {ref === ActiveMenu}
             <h2 className="text-gray-500 dark:text-white">{item.name}</h2>
+            <div className="flex w-full bg-blue-500 opacity-35 h-1"></div>
           </div>
         ))}
       </div>

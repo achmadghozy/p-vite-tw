@@ -37,6 +37,7 @@ function App() {
           ) : (
             <SecUnderConstruction />
           )}
+          <h2>{refRoute.current}</h2>
         </div>
         <div className="hidden md:block">
           <CompProgressBar />
