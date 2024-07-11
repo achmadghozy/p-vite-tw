@@ -1,6 +1,6 @@
-import { useState, forwardRef } from "react";
+import { useState } from "react";
 
-const CompHeader = forwardRef<number>(function CompHeader(props, ref) {
+const CompHeader2 = (props: any) => {
   const menu = [
     {
       id: 1,
@@ -20,17 +20,22 @@ const CompHeader = forwardRef<number>(function CompHeader(props, ref) {
     },
   ];
 
-  const [ActiveMenu, setActiveMenu] = useState(props);
+  const [ActiveMenu, setActiveMenu] = useState(1);
 
-  function handleClick(menuid: number) {
+  const handleClick = (menuid: number) => {
+    let a = 0;
+    console.log("Header log menu init:", menuid);
     setActiveMenu(menuid);
-  }
+    a = ActiveMenu;
+    console.log("Header log menu:", ActiveMenu);
+    props.onClick(ActiveMenu);
+  };
 
   return (
     <div className="flex items-center fixed w-full justify-between border-b-[1px] bg-white dark:bg-gray-600">
       <div
         className="w-[90px] h-[90px]
-            bg-black"
+                bg-black"
       >
         <img src="/react.svg" className="p-7" />
       </div>
@@ -43,14 +48,16 @@ const CompHeader = forwardRef<number>(function CompHeader(props, ref) {
           >
             <h2 className="text-gray-500 dark:text-white">{item.name}</h2>
             {ActiveMenu == item.id ? (
-              <div className="flex w-full bg-gray-300 opacity-35 h-1 rounded-md"></div>
+              <div className="flex w-full bg-gray-300 opacity-35 h-1 rounded-md">
+                <>{console.log("Bar menu active:", ActiveMenu)}</>
+              </div>
             ) : null}
           </div>
         ))}
       </div>
       <div
         className="w-[90px] h-[90px]
-            bg-red-500 flex justify-center items-center"
+                bg-red-500 flex justify-center items-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +76,6 @@ const CompHeader = forwardRef<number>(function CompHeader(props, ref) {
       </div>
     </div>
   );
-});
+};
 
-export default CompHeader;
+export default CompHeader2;

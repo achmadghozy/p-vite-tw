@@ -1,5 +1,5 @@
 import "./App.css";
-import CompHeader from "./components/CompHeader";
+import CompHeader2 from "./components/CompHeader2";
 import CompProgressBar from "./components/CompProgressBar";
 import CompSidebar from "./components/CompSidebar";
 import SecProfile from "./section/SecProfile";
@@ -14,30 +14,37 @@ function App() {
     PAGE_CONTACTS,
   }
 
+  const [Menu, SetMenu] = useState(pageRoute.PAGE_HOME);
+
   const refRoute = useRef<number>(pageRoute.PAGE_HOME);
 
-  function isPageAvailable(menu: number) {
-    switch (menu) {
+  const getRoute = (menuid: number) => {
+    SetMenu(menuid);
+    console.log("Menu id:", Menu);
+  };
+
+  const isPageAvailable = (menuid: number) => {
+    let bRes = false;
+    switch (menuid) {
       case pageRoute.PAGE_HOME:
-        return true;
+        bRes = true;
+        break;
 
       default:
-        return false;
+        break;
     }
-  }
+    console.log("is page available:", bRes);
+    return bRes;
+  };
 
   return (
     <div className="w-screen">
-      <CompHeader ref={refRoute} />
+      <CompHeader2 onClick={getRoute} />
       <CompSidebar />
       <div className="ml-[90px] grid grid-cols-1 md:grid-cols-5">
         <div className="col-span-4 p-5 mt-[90px]">
-          {isPageAvailable(refRoute.current) ? (
-            <SecProfile />
-          ) : (
-            <SecUnderConstruction />
-          )}
-          <h2>{refRoute.current}</h2>
+          <>{console.log(Menu)}</>
+          {isPageAvailable(Menu) ? <SecProfile /> : <SecUnderConstruction />}
         </div>
         <div className="hidden md:block">
           <CompProgressBar />
