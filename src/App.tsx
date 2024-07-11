@@ -14,7 +14,7 @@ function App() {
     PAGE_CONTACTS,
   }
 
-  const refRoute = useRef(pageRoute.PAGE_HOME);
+  const refRoute = useRef<number>(pageRoute.PAGE_HOME);
 
   function isPageAvailable(menu: number) {
     switch (menu) {

@@ -1,6 +1,6 @@
 import { useState, forwardRef } from "react";
 
-const CompHeader = forwardRef(function (ref) {
+const CompHeader = forwardRef<number>(function CompHeader(props, ref) {
   const menu = [
     {
       id: 1,
@@ -20,11 +20,15 @@ const CompHeader = forwardRef(function (ref) {
     },
   ];
 
-  const [ActiveMenu, setActiveMenu] = useState(ref);
-  let MenuTemp: number;
+  const [ActiveMenu, setActiveMenu] = useState(props);
+
+  function handleClick(menuid: number) {
+    setActiveMenu(menuid);
+    ref = menuid;
+  }
 
   return (
-    <div className="flex items-center fixed w-full justify-between border-b-[1px] bg-white dark:bg-gray-400">
+    <div className="flex items-center fixed w-full justify-between border-b-[1px] bg-white dark:bg-gray-600">
       <div
         className="w-[90px] h-[90px]
             bg-black"
@@ -35,13 +39,13 @@ const CompHeader = forwardRef(function (ref) {
         {menu.map((item, index) => (
           <div
             key={index}
-            className="cursor-pointer 
-                    hover:underline font-medium"
-            onClick={() => setActiveMenu(item.id)}
-            ref={this.ActiveMenu}
+            className="cursor-pointer hover:underline font-medium"
+            onClick={() => handleClick(item.id)}
           >
             <h2 className="text-gray-500 dark:text-white">{item.name}</h2>
-            <div className="flex w-full bg-blue-500 opacity-35 h-1"></div>
+            {ActiveMenu == item.id ? (
+              <div className="flex w-full bg-gray-300 opacity-35 h-1"></div>
+            ) : null}
           </div>
         ))}
       </div>
