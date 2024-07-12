@@ -42,7 +42,7 @@ function App() {
       <CompHeader2 onClick={getRoute} />
       <CompSidebar />
       <div className="ml-[90px] grid grid-cols-1 md:grid-cols-5">
-        <div className="col-span-4 p-5 mt-[90px]">
+        <div className="col-span-4 p-5 mt-[90px] transition-all ease-in-out">
           <>{console.log(Menu)}</>
           {isPageAvailable(Menu) ? <SecProfile /> : <SecUnderConstruction />}
         </div>

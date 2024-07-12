@@ -23,12 +23,9 @@ const CompHeader2 = (props: any) => {
   const [ActiveMenu, setActiveMenu] = useState(1);
 
   const handleClick = (menuid: number) => {
-    let a = 0;
     console.log("Header log menu init:", menuid);
     setActiveMenu(menuid);
-    a = ActiveMenu;
-    console.log("Header log menu:", ActiveMenu);
-    props.onClick(ActiveMenu);
+    props.onClick(menuid);
   };
 
   return (
