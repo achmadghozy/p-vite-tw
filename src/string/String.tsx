@@ -8,8 +8,10 @@ export default {
   EXPERIENCE: "EXPERIENCES",
 
   FRONTED: "FRONTEND DEV",
+  FRONTEND_LONG: "Front-end Software Engineer",
   FRONTED_DESC:
     "Elevate your online presence with captivating user interfaces and seamless experiences",
+  FRONTEND_DESC_LONG: "",
 
   BACKEND: "BACKEND DEV",
   BACKEND_DESC:

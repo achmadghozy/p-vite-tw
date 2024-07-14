@@ -5,6 +5,7 @@ import CompSidebar from "./components/CompSidebar";
 import SecProfile from "./section/SecProfile";
 import { useState, useRef } from "react";
 import SecUnderConstruction from "./section/SecUnderConstruction";
+import SecSkills from "./section/SecSkills";
 
 function App() {
   enum pageRoute {
@@ -23,18 +24,22 @@ function App() {
     console.log("Menu id:", Menu);
   };
 
-  const isPageAvailable = (menuid: number) => {
-    let bRes = false;
+  const GetPageAvailable = (menuid: number) => {
+    let nRes = <SecUnderConstruction />;
     switch (menuid) {
       case pageRoute.PAGE_HOME:
-        bRes = true;
+        nRes = <SecProfile />;
+        break;
+
+      case pageRoute.PAGE_SKILLS:
+        nRes = <SecSkills />;
         break;
 
       default:
         break;
     }
-    console.log("is page available:", bRes);
-    return bRes;
+    console.log("page available:", nRes);
+    return nRes;
   };
 
   return (
@@ -44,7 +49,7 @@ function App() {
       <div className="ml-[90px] grid grid-cols-1 md:grid-cols-5">
         <div className="col-span-4 p-5 mt-[90px] transition-all ease-in-out">
           <>{console.log(Menu)}</>
-          {isPageAvailable(Menu) ? <SecProfile /> : <SecUnderConstruction />}
+          {GetPageAvailable(Menu)}
         </div>
         <div className="hidden md:block">
           <CompProgressBar />
