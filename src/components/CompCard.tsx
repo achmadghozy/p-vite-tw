@@ -4,22 +4,23 @@ import { MdNavigateNext } from "react-icons/md";
 type props = {
   title: string;
   desc: string;
-  thumbnail: string;
-  alt: string;
+  img_src: string;
+  img_alt: string;
+  skill_map: Array<string>;
 };
 
-function CompCard({ title, desc, thumbnail, alt }: props) {
+function CompCard({ title, desc, img_src, img_alt }: props) {
   return (
-    <div className="flex flex-row content-start w-full  hover:shadow-sm hover:shadow-white rounded-md transition-shadow">
-      <div className="flex w-10 content-center mt-2">
+    <div className="flex flex-row flex-none content-start w-full justify-start hover:shadow-sm hover:shadow-white rounded-md transition-shadow p-5">
+      <div className="flex w-[100px] content-center justify-normal">
         <img
-          src={thumbnail}
-          alt={alt}
-          className="ml-2 mr-5 mt-2 w-10 h-10 border-white bg-slate-100 rounded-sm"
+          src={img_src}
+          alt={img_alt}
+          className="w-[80px] h-[80px] rounded-sm p-2 bg-white"
         ></img>
       </div>
-      <div className="flex flex-col content-start justify-start mt-2 ml-5">
-        <h2 className="text-left">{title}</h2>
+      <div className="flex flex-col flex-1 content-start justify-start">
+        <h2 className="text-start text-lg font-semibold">{title}</h2>
         <h2 className="text-left">{desc}</h2>
       </div>
       <div className="flex w-10 content-center justify-between align-middle">

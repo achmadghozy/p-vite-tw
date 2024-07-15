@@ -11,7 +11,8 @@ export default {
   FRONTEND_LONG: "Front-end Software Engineer",
   FRONTED_DESC:
     "Elevate your online presence with captivating user interfaces and seamless experiences",
-  FRONTEND_DESC_LONG: "",
+  FRONTEND_DESC_LONG:
+    "Frontend Development Expertise: Proficient in crafting intuitive user interfaces and seamless interactive experiences using modern web technologies: HTML5, CSS3, JavaScript, and frameworks like React and Next. Demonstrated ability to design responsive layouts and optimize frontend performance to deliver exceptional user experiences.",
 
   BACKEND: "BACKEND DEV",
   BACKEND_DESC:
