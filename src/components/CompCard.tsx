@@ -1,12 +1,22 @@
 import React from "react";
 import { MdNavigateNext } from "react-icons/md";
 
+type skillmap = [
+  {
+    id: number;
+    title: string;
+    img_src: string;
+    skill_lvl: number;
+    skill_lvl_desc?: string;
+  }
+];
+
 type props = {
   title: string;
   desc: string;
   img_src: string;
   img_alt: string;
-  skill_map: Array<string>;
+  skill_map: skillmap;
 };
 
 function CompCard({ title, desc, img_src, img_alt }: props) {
