@@ -16,25 +16,23 @@ function SecSkills() {
       title: "HTML5",
       img_src: "/html-5-logo.svg",
       skill_lvl: 5,
-      skill_lvl__desc: "2 years of side projects",
+      skill_lvl_desc: "2 years of side projects",
     },
     {
       id: 3,
       title: "Tailwind CSS",
       img_src: "/tailwind.svg",
       skill_lvl: 5,
-      skill_lvl__desc: "1.5 years of side projects",
+      skill_lvl_desc: "1.5 years of side projects",
     },
     {
       id: 4,
       title: "ThreeJS",
       img_src: "/threejs.svg",
       skill_lvl: 5,
-      skill_lvl__desc: ".5 years of side projects",
+      skill_lvl_desc: ".5 years of side projects",
     },
   ];
-
-  skills_frontend.map(FESkillsF);
 
   return (
     <div className="w-full h-screen">
@@ -47,6 +45,11 @@ function SecSkills() {
         img_src={"/web-design.png"}
         img_alt={"Frontend Engineer"}
         skill_map={skills_frontend}
+      />
+      <CompCard
+        title={String.BACKEND_LONG}
+        desc={String.BACKEND_DESC_LONG}
+        img_src={"/"}
       />
     </div>
   );
