@@ -12,11 +12,14 @@ export default {
   FRONTED_DESC:
     "Elevate your online presence with captivating user interfaces and seamless experiences",
   FRONTEND_DESC_LONG:
-    "Frontend Development Expertise: Proficient in crafting intuitive user interfaces and seamless interactive experiences using modern web technologies: HTML5, CSS3, JavaScript, and frameworks like React and Next. Demonstrated ability to design responsive layouts and optimize frontend performance to deliver exceptional user experiences.",
+    "Frontend Development Expertise: Proficient in crafting intuitive user interfaces and seamless interactive experiences using modern web technologies: HTML5, JavaScript, Tailwind CSS, and frameworks like React and Next. Demonstrated ability to design responsive layouts and optimize frontend performance to deliver exceptional user experiences.",
 
   BACKEND: "BACKEND DEV",
+  BACKEND_LONG: "Back-end Software Engineer",
   BACKEND_DESC:
     "Developing application backend and Server side development using various backend technology",
+  BACKEND_DESC_LONG:
+    "Specialize in backend web development with a strong command of Gin-Gonic for Golang and Express.js for NodeJS. With expertise in building robust APIs and web services, I leverage these frameworks to create efficient, scalable, and secure server-side solutions. My skills include RESTful API design, database integration, and performance optimization, ensuring seamless functionality and a superior user experience.",
 
   FULLSTACK: "FULLSTACK DEV",
   FULLSTACK_DESC:

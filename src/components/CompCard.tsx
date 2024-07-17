@@ -20,7 +20,7 @@ type props = {
 
 function CompCard({ title, desc, img_src, img_alt, skill_map }: props) {
   return (
-    <div className="flex flex-row flex-none content-start w-full justify-start hover:shadow-sm hover:shadow-white rounded-md transition-shadow p-5">
+    <div className="flex flex-row flex-none content-start w-full justify-start my-2 hover:shadow-sm hover:shadow-white rounded-md transition-shadow p-2">
       <div className="flex w-[100px] content-center justify-normal">
         <img
           src={img_src}
@@ -44,7 +44,7 @@ function CompCard({ title, desc, img_src, img_alt, skill_map }: props) {
           ))}
         </div>
       </div>
-      <div className="flex w-10 content-center justify-between align-middle">
+      <div className="flex w-10 content-center ml-1 justify-between align-middle opacity-100 hover:bg-slate-500 hover:opacity-80 rounded-md cursor-pointer">
         <MdNavigateNext className="w-10 h-full" />
       </div>
     </div>

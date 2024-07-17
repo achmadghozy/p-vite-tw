@@ -20,10 +20,10 @@ function CompSkillCard({ title, img_src, skill_lvl, skill_lvl_desc }: props) {
   }
   return (
     <div className="flex flex-row w-full my-1">
-      <div className="flex w-[50px] content-center justify-between align-middle">
+      <div className="flex w-[50px] h-[50px] content-center justify-between align-middle">
         <img
           src={img_src}
-          className="w-full bg-white rounded-md px-[0.5px] py-[0.5px]"
+          className="w-full bg-white rounded-md px-[0.5px] py-[0.5px] "
         ></img>
       </div>
       <div className="flex flex-1 flex-col content-start justify-start ml-2">
@@ -31,7 +31,7 @@ function CompSkillCard({ title, img_src, skill_lvl, skill_lvl_desc }: props) {
           {title}
         </h2>
         {skill_lvl_desc != (null || "") ? (
-          <h2 className="text-left justify-start text-[12px] font-light align-text-bottom">
+          <h2 className="text-left justify-start text-[14px] font-light align-text-bottom">
             {skill_lvl_desc}
           </h2>
         ) : (

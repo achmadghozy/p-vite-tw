@@ -42,12 +42,30 @@ function App() {
     return nRes;
   };
 
+  const GetPageString = (menuid: number) => {
+    let cRes = "Under Construction";
+    switch (menuid) {
+      case pageRoute.PAGE_HOME:
+        cRes = "HOMEPAGE";
+        break;
+
+      case pageRoute.PAGE_SKILLS:
+        cRes = "SKILLS";
+        break;
+
+      default:
+        break;
+    }
+    console.log("page available:", cRes);
+    return cRes;
+  };
+
   return (
     <div className="w-screen">
       <CompHeader2 onClick={getRoute} />
-      <CompSidebar />
+      <CompSidebar menu={GetPageString(Menu)} />
       <div className="ml-[90px] grid grid-cols-1 md:grid-cols-5">
-        <div className="col-span-4 p-5 mt-[90px] transition-all ease-in-out">
+        <div className="col-span-4 p-5 mt-[90px] h-screen">
           <>{console.log(Menu)}</>
           {GetPageAvailable(Menu)}
         </div>
