@@ -1,6 +1,7 @@
 import React from "react";
 import { MdNavigateNext } from "react-icons/md";
 import CompSkillCard from "./CompSkillCard";
+import { IconContext } from "react-icons";
 
 interface skillmap {
   id: number;
@@ -15,7 +16,7 @@ type props = {
   desc: string;
   img_src: string;
   img_alt: string;
-  skill_map?: any[{}];
+  skill_map?: skillmap[{}];
 };
 
 function CompCard({ title, desc, img_src, img_alt, skill_map }: props) {
@@ -44,8 +45,8 @@ function CompCard({ title, desc, img_src, img_alt, skill_map }: props) {
           ))}
         </div>
       </div>
-      <div className="flex w-10 content-center ml-1 justify-between align-middle opacity-100 hover:bg-slate-500 hover:opacity-80 rounded-md cursor-pointer">
-        <MdNavigateNext className="w-10 h-full" />
+      <div className="group flex w-10 content-center ml-1 justify-between align-middle opacity-100 hover:bg-slate-500 hover:opacity-80 rounded-md cursor-pointer">
+        <MdNavigateNext className="w-10 h-full group-hover:fill-black" />
       </div>
     </div>
   );
