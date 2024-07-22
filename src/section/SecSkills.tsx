@@ -6,27 +6,34 @@ function SecSkills() {
   const skills_frontend = [
     {
       id: 1,
+      title: "VC++ Epson Framework",
+      img_src: "/epson-2.svg",
+      skill_lvl: 0,
+      skill_lvl_desc: "3+ Years of main works",
+    },
+    {
+      id: 2,
       title: "ReactJS",
       img_src: "/react.svg",
       skill_lvl: 0,
       skill_lvl_desc: "2 years of side projects",
     },
     {
-      id: 2,
+      id: 3,
       title: "HTML5",
       img_src: "/html-5-logo.svg",
       skill_lvl: 0,
       skill_lvl_desc: "2 years of side projects",
     },
     {
-      id: 3,
+      id: 4,
       title: "Tailwind CSS",
       img_src: "/tailwind.svg",
       skill_lvl: 0,
       skill_lvl_desc: "1.5 years of side projects",
     },
     {
-      id: 4,
+      id: 5,
       title: "ThreeJS",
       img_src: "/threejs.svg",
       skill_lvl: 0,
@@ -49,7 +56,22 @@ function SecSkills() {
       skill_lvl_desc: "2 years of side projects",
     },
   ];
-
+  const firmware_skills = [
+    {
+      id: 1,
+      title: "freeRTOS",
+      img_src: "/gin-gonic.png",
+      skill_lvl: 0,
+      skill_lvl_desc: "2 years of side projects",
+    },
+    {
+      id: 2,
+      title: "ExpressJS",
+      img_src: "/express-js.png",
+      skill_lvl: 0,
+      skill_lvl_desc: "2 years of side projects",
+    },
+  ];
   return (
     <div className="w-full h-screen">
       <h2 className="text-[55px] font-extrabold text-left text-white ml-5">

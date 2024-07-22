@@ -6,6 +6,7 @@ import SecProfile from "./section/SecProfile";
 import { useState, useRef } from "react";
 import SecUnderConstruction from "./section/SecUnderConstruction";
 import SecSkills from "./section/SecSkills";
+import SecProjects from "./section/SecProjects";
 
 function App() {
   enum pageRoute {
@@ -35,6 +36,10 @@ function App() {
         nRes = <SecSkills />;
         break;
 
+      case pageRoute.PAGE_PROJECTS:
+        nRes = <SecProjects />;
+        break;
+
       default:
         break;
     }
@@ -43,7 +48,7 @@ function App() {
   };
 
   const GetPageString = (menuid: number) => {
-    let cRes = "Under Construction";
+    let cRes = "UNAIVAILABLE";
     switch (menuid) {
       case pageRoute.PAGE_HOME:
         cRes = "HOMEPAGE";
@@ -51,6 +56,10 @@ function App() {
 
       case pageRoute.PAGE_SKILLS:
         cRes = "SKILLS";
+        break;
+
+      case pageRoute.PAGE_PROJECTS:
+        cRes = "PROJETS";
         break;
 
       default:
