@@ -34,7 +34,7 @@ function CompCard({ title, desc, img_src, img_alt, skill_map }: props) {
         <h2 className="text-left">{desc}</h2>
         <div className="flex flex-col content-start mt-2">
           {skill_map.map((item: any) => (
-            <div className="my-1">
+            <div className="">
               <CompSkillCard
                 title={item.title}
                 img_src={item.img_src}
