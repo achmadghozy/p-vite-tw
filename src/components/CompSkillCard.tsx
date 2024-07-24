@@ -22,7 +22,7 @@ function CompSkillCard({ title, img_src, skill_lvl, skill_lvl_desc }: props) {
   const isNeedDesc = (props: string) => {
     if (props != (null || "")) {
       return (
-        <h2 className="text-left justify-start text-[14px] font-light align-text-bottom">
+        <h2 className="text-left justify-center text-[14px] font-light align-center">
           {props}
         </h2>
       );
@@ -39,15 +39,15 @@ function CompSkillCard({ title, img_src, skill_lvl, skill_lvl_desc }: props) {
     return rows;
   }
   return (
-    <div className="flex flex-row m-1 border-gray-300 border-opacity-60 p-5">
-      <div className="flex w-[40px] h-[40px] content-center justify-between align-middle">
+    <div className="relative flex flex-row h-[50px] m-1 border-gray-300 border-opacity-60 p-2 hover:bg-slate-500 hover:bg-opacity-95 rounded-lg">
+      <div className="absolute left-0 top-[5px] flex w-[40px] h-full content-center justify-between align-middle">
         <img
           src={img_src}
-          className="w-full bg-white rounded-md px-[0.5px] py-[0.5px] "
+          className="w-[39px] h-[39px] bg-white rounded-md p-[0.5px] "
         ></img>
       </div>
-      <div className="flex flex-1 flex-col content-start justify-center ml-2">
-        <h2 className="text-left justify-start text-lg font-semibold">
+      <div className="absolute left-[45px] top-0 flex flex-1 flex-col content-start justify-center ml-2">
+        <h2 className="text-left justify-center text-lg font-semibold">
           {title}
         </h2>
         {isNeedDesc(skill_lvl_desc)}

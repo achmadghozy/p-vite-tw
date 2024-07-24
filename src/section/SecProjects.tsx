@@ -1,5 +1,6 @@
 import React from "react";
 import CompShowcase from "../components/CompShowcase";
+import String from "../string/String";
 
 interface Projects {
   title: string;
@@ -26,9 +27,9 @@ function SecProjects() {
 
   const Projects = [
     {
-      title: "UI Elearning",
+      title: String.PROJ_ELEARNING_TITLE,
       img: "/Elearning.png",
-      desc: "Lorep ipsum",
+      desc: String.PROJ_ELEARNING_DESC,
       stack_used: stArrayStackElearning,
     },
   ];

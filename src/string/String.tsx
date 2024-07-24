@@ -46,4 +46,8 @@ export default {
   JOB_TDS_JOIN_YEAR: "2020",
   JOB_TDS_END_MONTH: "SEPT",
   JOB_TDS_END_YEAR: "2020",
+
+  PROJ_ELEARNING_TITLE: "UI Elearning",
+  PROJ_ELEARNING_DESC:
+    "Create Elearning portal for training new member, include document viewer fetch via DB, online test, and provide dashboard summary for lecturer",
 };

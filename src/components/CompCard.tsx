@@ -1,7 +1,5 @@
-import React from "react";
 import { MdNavigateNext } from "react-icons/md";
 import CompSkillCard from "./CompSkillCard";
-import { IconContext } from "react-icons";
 
 interface skillmap {
   id: number;

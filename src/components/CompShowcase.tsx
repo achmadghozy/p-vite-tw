@@ -15,7 +15,7 @@ function CompShowcase({ props }: any) {
         <div className="flex-1 flex-col ml-5">
           <h2 className="text-[20px] tracking-wide">{props.title}</h2>
           <h2 className="text-[16px] tracking-normal">{props.desc}</h2>
-          <div className="flex flex-row">
+          <div className="flex flex-row mt-3">
             {props.stack_used.map((item: any) => (
               <CompSkillCard
                 title={item.title}
