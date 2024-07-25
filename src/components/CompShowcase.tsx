@@ -3,7 +3,7 @@ import CompSkillCard from "./CompSkillCard";
 
 function CompShowcase({ props }: any) {
   return (
-    <div className="flex flex-col w-full bg-gray-800 shadow-sm shadow-green-500">
+    <div className="flex flex-col w-full bg-gray-800 shadow-sm shadow-green-500 p-3">
       <div className="flex flex-row w-full">
         <div className="w-[100px]">
           <img
@@ -15,7 +15,7 @@ function CompShowcase({ props }: any) {
         <div className="flex-1 flex-col ml-5">
           <h2 className="text-[20px] tracking-wide">{props.title}</h2>
           <h2 className="text-[16px] tracking-normal">{props.desc}</h2>
-          <div className="flex flex-row mt-3">
+          <div className="flex flex-row flex-wrap mt-3">
             {props.stack_used.map((item: any) => (
               <CompSkillCard
                 title={item.title}
@@ -26,6 +26,9 @@ function CompShowcase({ props }: any) {
             ))}
           </div>
         </div>
+      </div>
+      <div className="flex w-full p-2 border-blue-500 bg-transparent hover:bg-slate-500 hover:cursor-pointer rounded-full content-center justify-center">
+        <h2 className="font-[14px] text-center font-style: italic">Go Livee</h2>
       </div>
     </div>
   );

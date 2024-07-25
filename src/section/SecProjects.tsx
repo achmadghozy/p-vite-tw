@@ -23,6 +23,18 @@ function SecProjects() {
       skill_lvl: 0,
       skill_lvl_desc: "",
     },
+    {
+      title: "MongoDB",
+      img_src: "/mongodb.png",
+      skill_lvl: 0,
+      skill_lvl_desc: "",
+    },
+    {
+      title: "NodeJS",
+      img_src: "/nodejs.png",
+      skill_lvl: 0,
+      skill_lvl_desc: "",
+    },
   ];
 
   const Projects = [
