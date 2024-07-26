@@ -1,7 +1,12 @@
 import React from "react";
 import CompSkillCard from "./CompSkillCard";
 
-function CompShowcase({ props }: any) {
+interface ShowCaseProps {
+  stack_used: string[];
+  isWebBased: boolean;
+}
+
+const CompShowcase: React.FC<ShowCaseProps> = ({ props }: any) => {
   return (
     <div className="flex flex-col w-full bg-gray-800 shadow-sm shadow-green-500 p-3">
       <div className="flex flex-row w-full">
@@ -27,11 +32,17 @@ function CompShowcase({ props }: any) {
           </div>
         </div>
       </div>
-      <div className="flex w-full p-2 border-blue-500 bg-transparent hover:bg-slate-500 hover:cursor-pointer rounded-full content-center justify-center">
-        <h2 className="font-[14px] text-center font-style: italic">Go Livee</h2>
-      </div>
+      {props.isWebBased === true ? (
+        <div className="flex w-full p-2 border-blue-500 bg-transparent hover:bg-slate-500 hover:cursor-pointer rounded-full content-center justify-center">
+          <h2 className="font-[14px] text-center font-style: italic">
+            Go Live!
+          </h2>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
-}
+};
 
 export default CompShowcase;

@@ -7,6 +7,7 @@ import { useState, useRef } from "react";
 import SecUnderConstruction from "./section/SecUnderConstruction";
 import SecSkills from "./section/SecSkills";
 import SecProjects from "./section/SecProjects";
+import CompIndex from "./components/CompIndex";
 
 function App() {
   enum pageRoute {

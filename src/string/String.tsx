@@ -50,4 +50,12 @@ export default {
   PROJ_ELEARNING_TITLE: "UI Elearning",
   PROJ_ELEARNING_DESC:
     "Create Elearning portal for training new member, include document viewer fetch via DB, online test, and provide dashboard summary for lecturer",
+
+  PROJ_P4_TITLE: "UI Source Code Baseline Check",
+  PROJ_P4_DESC:
+    "Create windows application to check source code change during development, running Perforce script, and import it to excel.",
+
+  PROJ_JOBMONITOR_TITLE: "UI Job Ticket Monitor",
+  PROJ_JOBMONITOR_DESC:
+    "Create Job Ticket monitor each team, created using webscraping method using NodeJS, and import to Excel files",
 };

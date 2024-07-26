@@ -77,20 +77,24 @@ function SecSkills() {
       <h2 className="text-[55px] font-extrabold text-left text-white ml-5">
         SKILLSET
       </h2>
-      <CompCard
-        title={String.FRONTEND_LONG}
-        desc={String.FRONTEND_DESC_LONG}
-        img_src={"/web-design.png"}
-        img_alt={"Frontend Engineer"}
-        skill_map={skills_frontend}
-      />
-      <CompCard
-        title={String.BACKEND_LONG}
-        desc={String.BACKEND_DESC_LONG}
-        img_src={"/backend-coding.png"}
-        img_alt={"Frontend Engineer"}
-        skill_map={skills_backend}
-      />
+      <section>
+        <CompCard
+          title={String.FRONTEND_LONG}
+          desc={String.FRONTEND_DESC_LONG}
+          img_src={"/web-design.png"}
+          img_alt={"Frontend Engineer"}
+          skill_map={skills_frontend}
+        />
+      </section>
+      <section>
+        <CompCard
+          title={String.BACKEND_LONG}
+          desc={String.BACKEND_DESC_LONG}
+          img_src={"/backend-coding.png"}
+          img_alt={"Frontend Engineer"}
+          skill_map={skills_backend}
+        />
+      </section>
     </div>
   );
 }
