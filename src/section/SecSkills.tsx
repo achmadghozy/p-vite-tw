@@ -77,24 +77,35 @@ function SecSkills() {
       <h2 className="text-[55px] font-extrabold text-left text-white ml-5">
         SKILLSET
       </h2>
-      <section>
-        <CompCard
-          title={String.FRONTEND_LONG}
-          desc={String.FRONTEND_DESC_LONG}
-          img_src={"/web-design.png"}
-          img_alt={"Frontend Engineer"}
-          skill_map={skills_frontend}
-        />
-      </section>
-      <section>
-        <CompCard
-          title={String.BACKEND_LONG}
-          desc={String.BACKEND_DESC_LONG}
-          img_src={"/backend-coding.png"}
-          img_alt={"Frontend Engineer"}
-          skill_map={skills_backend}
-        />
-      </section>
+      <div className="flex flex-col">
+        <section id="frontend-skills">
+          <CompCard
+            title={String.FRONTEND_LONG}
+            desc={String.FRONTEND_DESC_LONG}
+            img_src={"/web-design.png"}
+            img_alt={"Frontend Engineer"}
+            skill_map={skills_frontend}
+          />
+        </section>
+        <section id="backend-skills">
+          <CompCard
+            title={String.BACKEND_LONG}
+            desc={String.BACKEND_DESC_LONG}
+            img_src={"/backend-coding.png"}
+            img_alt={"Frontend Engineer"}
+            skill_map={skills_backend}
+          />
+        </section>
+        <section id="firmware-skills">
+          <CompCard
+            title={String.BACKEND_LONG}
+            desc={String.BACKEND_DESC_LONG}
+            img_src={"/backend-coding.png"}
+            img_alt={"Frontend Engineer"}
+            skill_map={firmware_skills}
+          />
+        </section>
+      </div>
     </div>
   );
 }

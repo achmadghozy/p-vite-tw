@@ -15,11 +15,10 @@ function App() {
     PAGE_SKILLS,
     PAGE_PROJECTS,
     PAGE_CONTACTS,
+    PAGE_DASHBOARD,
   }
 
   const [Menu, SetMenu] = useState(pageRoute.PAGE_HOME);
-
-  const refRoute = useRef<number>(pageRoute.PAGE_HOME);
 
   const getRoute = (menuid: number) => {
     SetMenu(menuid);

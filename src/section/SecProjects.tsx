@@ -101,7 +101,7 @@ function SecProjects() {
       <h2 className="font-extrabold text-[40px] text-right underline tracking-wider font-sans">
         PROJECTS
       </h2>
-      <section className="p-1 mt-10">
+      <section id="Epson Projects" className="p-1 mt-10">
         <h2 className="dark:text-white font-semibold text-xl text-gray-600 text-left tracking-wide font-sans">
           Some the kaizen projects we've developed during tenure in Epson
         </h2>
