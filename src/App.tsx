@@ -8,6 +8,9 @@ import SecUnderConstruction from "./section/SecUnderConstruction";
 import SecSkills from "./section/SecSkills";
 import SecProjects from "./section/SecProjects";
 import CompIndex from "./components/CompIndex";
+import SecDashboard from "./section/SecDashboard";
+import CompHeader3 from "./components/CompHeader3";
+import CompSidebar2 from "./components/CompSidebar2";
 
 function App() {
   enum pageRoute {
@@ -40,6 +43,10 @@ function App() {
         nRes = <SecProjects />;
         break;
 
+      case pageRoute.PAGE_CONTACTS:
+        nRes = <SecDashboard />;
+        break;
+
       default:
         break;
     }
@@ -48,7 +55,7 @@ function App() {
   };
 
   const GetPageString = (menuid: number) => {
-    let cRes = "UNAIVAILABLE";
+    let cRes = "UNAVAILABLE";
     switch (menuid) {
       case pageRoute.PAGE_HOME:
         cRes = "HOMEPAGE";
@@ -59,7 +66,7 @@ function App() {
         break;
 
       case pageRoute.PAGE_PROJECTS:
-        cRes = "PROJETS";
+        cRes = "PROJECTS";
         break;
 
       default:
@@ -69,17 +76,33 @@ function App() {
     return cRes;
   };
 
+  const GetHeader = (menuid: number) => {
+    if (menuid === pageRoute.PAGE_CONTACTS) {
+      return <CompHeader3 />;
+    } else {
+      return <CompHeader2 onClick={getRoute} />;
+    }
+  };
+
+  const GetSidebar = (menuid: number) => {
+    if (menuid === pageRoute.PAGE_CONTACTS) {
+      return <CompSidebar2 />;
+    } else {
+      return <CompSidebar menu={GetPageString(Menu)} />;
+    }
+  };
+
   return (
     <div className="w-screen">
-      <CompHeader2 onClick={getRoute} />
-      <CompSidebar menu={GetPageString(Menu)} />
+      {GetHeader(Menu)}
+      {GetSidebar(Menu)}
       <div className="ml-[90px] grid grid-cols-1 md:grid-cols-5">
         <div className="col-span-4 p-5 mt-[90px] h-screen">
           <>{console.log(Menu)}</>
           {GetPageAvailable(Menu)}
         </div>
         <div className="hidden md:block">
-          <CompProgressBar />
+          {Menu !== pageRoute.PAGE_CONTACTS ? <CompProgressBar /> : <></>}
         </div>
       </div>
     </div>
