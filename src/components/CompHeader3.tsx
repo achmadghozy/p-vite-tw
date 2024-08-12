@@ -4,8 +4,8 @@ import { IoIosLogOut } from "react-icons/io";
 function CompHeader3() {
   return (
     <div
-      className="flex flex-row  h-16 w-full bg-slate-100 content-center items-center justify-between
-     text-slate-700 dark:bg-gray-900 dark:text-white shadow-gray-400"
+      className="fixed flex flex-row  h-16 w-full bg-slate-100 content-center items-center justify-between
+     text-slate-700 dark:bg-gray-900 dark:text-white shadow-gray-400 border-b-2 border-gray-600"
     >
       <h2 className="flex font-semibold text-[20px] ml-10">
         {"UI E-Learning Dashboard"}

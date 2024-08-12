@@ -3,7 +3,11 @@ import React from "react";
 interface Profile2Props {}
 
 const SecProfile2: React.FC<Profile2Props> = () => {
-  return <div> Sec Profile2 </div>;
+  return (
+    <head>
+      <div></div>
+    </head>
+  );
 };
 
 export default SecProfile2;
