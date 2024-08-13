@@ -80,7 +80,7 @@ function App() {
     if (menuid === pageRoute.PAGE_CONTACTS) {
       return <CompHeader3 />;
     } else {
-      return <CompHeader2 onClick={getRoute} />;
+      return <CompHeader2 headerClick={getRoute} />;
     }
   };
 

@@ -1,14 +1,19 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-type props = {
+type skillcardProps = {
   title: string;
   img_src: string;
   skill_lvl: number;
   skill_lvl_desc: string;
 };
 
-function CompSkillCard({ title, img_src, skill_lvl, skill_lvl_desc }: props) {
+const CompSkillCard: React.FC<skillcardProps> = ({
+  title,
+  img_src,
+  skill_lvl,
+  skill_lvl_desc,
+}: skillcardProps) => {
   const isNeedLvl = (props: number) => {
     if (props > 1) {
       return (
@@ -61,6 +66,6 @@ function CompSkillCard({ title, img_src, skill_lvl, skill_lvl_desc }: props) {
       {isNeedLvl(skill_lvl)}
     </div>
   );
-}
+};
 
 export default CompSkillCard;

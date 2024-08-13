@@ -2,15 +2,23 @@ import React from "react";
 import CompShowcase from "../components/CompShowcase";
 import String from "../string/String";
 
-interface Projects {
+interface projectsIF {
   title: string;
   img: string;
   desc: string;
-  stack_used: {};
+  stack_used: stackUsedIF[];
+  isWebBased: boolean;
+}
+
+interface stackUsedIF {
+  title: string;
+  img_src: string;
+  skill_lvl?: number;
+  skill_lvl_desc?: string;
 }
 
 function SecProjects() {
-  const stArrayStackElearning = [
+  const stArrayStackElearning: stackUsedIF[] = [
     {
       title: "ReactJS",
       img_src: "/react.svg",
@@ -37,7 +45,7 @@ function SecProjects() {
     },
   ];
 
-  const stArrayStackJobMonitor = [
+  const stArrayStackJobMonitor: stackUsedIF[] = [
     {
       title: "NodeJS",
       img_src: "/nodejs.png",
@@ -52,7 +60,7 @@ function SecProjects() {
     },
   ];
 
-  const stArrayStackBaseline = [
+  const stArrayStackBaseline: stackUsedIF[] = [
     {
       title: "VB.Net",
       img_src: "/vbnet.png",
@@ -73,7 +81,7 @@ function SecProjects() {
     },
   ];
 
-  const EpsonProjects = [
+  const EpsonProjects: projectsIF[] = [
     {
       title: String.PROJ_ELEARNING_TITLE,
       img: "/Elearning.png",
@@ -106,9 +114,15 @@ function SecProjects() {
           Some the kaizen projects we've developed during tenure in Epson
         </h2>
         <div className="flex flex-col bg-sky-200 dark:bg-slate-400 mt-5">
-          {EpsonProjects.map((item: Projects, index: number) => (
+          {EpsonProjects.map((item: projectsIF, index: number) => (
             <div key={index}>
-              <CompShowcase props={item} />
+              <CompShowcase
+                title={item.title}
+                img={item.img}
+                desc={item.desc}
+                stack_used={item.stack_used}
+                isWebBased={item.isWebBased}
+              />
             </div>
           ))}
         </div>

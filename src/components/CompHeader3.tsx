@@ -1,7 +1,11 @@
 import React from "react";
 import { IoIosLogOut } from "react-icons/io";
 
-function CompHeader3() {
+interface Header3Props {
+  onClick: () => void;
+}
+
+const CompHeader3: React.FC<Header3Props> = (onClick) => {
   return (
     <div
       className="fixed flex flex-row  h-16 w-full bg-slate-100 content-center items-center justify-between
@@ -18,6 +22,6 @@ function CompHeader3() {
       </div>
     </div>
   );
-}
+};
 
 export default CompHeader3;

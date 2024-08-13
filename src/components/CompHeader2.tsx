@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-const CompHeader2 = (props: any) => {
+interface header2Props {
+  headerClick: (id: number) => void;
+}
+
+const CompHeader2: React.FC<header2Props> = ({ headerClick }) => {
   const menu = [
     {
       id: 1,
@@ -25,7 +29,7 @@ const CompHeader2 = (props: any) => {
   const handleClick = (menuid: number) => {
     console.log("Header log menu init:", menuid);
     setActiveMenu(menuid);
-    props.onClick(menuid);
+    headerClick(menuid);
   };
 
   return (

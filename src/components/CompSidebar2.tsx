@@ -2,7 +2,11 @@ import { useState } from "react";
 import { FaBook } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 
-function CompSidebar2() {
+interface Sidebar2Props {
+  onClick: () => void;
+}
+
+const CompSidebar2: React.FC<Sidebar2Props> = (onClick) => {
   enum enumgnrl_menu {
     overview = 0,
     overview_grade,
@@ -63,11 +67,12 @@ function CompSidebar2() {
             <h2>-Course 1</h2>
             <h2>-Course 2</h2>
             <h2>-Course 3</h2>
+            {/* Change to API for courses */}
           </ul>
         </div>
       </ul>
     </div>
   );
-}
+};
 
 export default CompSidebar2;

@@ -1,23 +1,28 @@
 import { MdNavigateNext } from "react-icons/md";
 import CompSkillCard from "./CompSkillCard";
 
-interface skillmap {
-  id: number;
+interface stackUsedIF {
   title: string;
   img_src: string;
-  skill_lvl: number;
+  skill_lvl?: number;
   skill_lvl_desc?: string;
 }
 
-type props = {
+interface cardProps {
   title: string;
   desc: string;
   img_src: string;
   img_alt: string;
-  skill_map?: skillmap[{}];
-};
+  skill_map: stackUsedIF[];
+}
 
-function CompCard({ title, desc, img_src, img_alt, skill_map }: props) {
+const CompCard: React.FC<cardProps> = ({
+  title,
+  desc,
+  img_src,
+  img_alt,
+  skill_map,
+}: cardProps) => {
   return (
     <div className="flex flex-row flex-none content-start w-full justify-start my-2 hover:shadow-sm hover:shadow-white rounded-md transition-shadow p-2">
       <div className="flex w-[100px] content-center justify-normal">
@@ -31,8 +36,8 @@ function CompCard({ title, desc, img_src, img_alt, skill_map }: props) {
         <h2 className="text-start text-lg font-semibold">{title}</h2>
         <h2 className="text-left">{desc}</h2>
         <div className="flex flex-col content-start mt-2">
-          {skill_map.map((item: any) => (
-            <div className="">
+          {skill_map.map((item: any, index: number) => (
+            <div className="" key={index}>
               <CompSkillCard
                 title={item.title}
                 img_src={item.img_src}
@@ -48,6 +53,6 @@ function CompCard({ title, desc, img_src, img_alt, skill_map }: props) {
       </div>
     </div>
   );
-}
+};
 
 export default CompCard;
