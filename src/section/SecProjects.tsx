@@ -1,4 +1,3 @@
-import React from "react";
 import CompShowcase from "../components/CompShowcase";
 import String from "../string/String";
 

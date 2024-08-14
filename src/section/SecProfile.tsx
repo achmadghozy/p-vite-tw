@@ -2,6 +2,8 @@ import Strings from "../string/String";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
+interface ProfileIF {}
+
 function Introduction() {
   return (
     <div className="flex justify-center flex-col items-center">
@@ -158,15 +160,15 @@ function WorkExperience() {
   );
 }
 
-function SecProfile() {
+const SecProfile: React.FC<ProfileIF> = ({}) => {
   return (
     <div>
-      {Introduction()}
-      {AboutMe()}
-      {Speciality()}
-      {WorkExperience()}
+      <section id="Intro">{Introduction()}</section>
+      <section id="About">{AboutMe()}</section>
+      <section id="Speciality">{Speciality()}</section>
+      <section id="Work Experience">{WorkExperience()}</section>
     </div>
   );
-}
+};
 
 export default SecProfile;

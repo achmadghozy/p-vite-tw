@@ -1,5 +1,3 @@
-import React from "react";
-
 function SecUnderConstruction() {
   return (
     <div className="flex flex-auto w-full h-screen items-center">
