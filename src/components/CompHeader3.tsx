@@ -5,7 +5,7 @@ interface Header3Props {
   onClick: () => void;
 }
 
-const CompHeader3: React.FC<Header3Props> = (onClick) => {
+const CompHeader3: React.FC<Header3Props> = ({ onClick }) => {
   return (
     <div
       className="fixed flex flex-row  h-16 w-full bg-slate-100 content-center items-center justify-between

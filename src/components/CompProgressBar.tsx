@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import CompIndex from "./CompIndex";
 
-interface progBarIF {
-  menuActive: number;
-}
+interface progBarIF {}
 
-const CompProgressBar: React.FC<progBarIF> = ({ menuActive }) => {
-  const tempMenuActive = menuActive;
-
+const CompProgressBar: React.FC<progBarIF> = ({}) => {
   const [scrollTop, setScrollTop] = useState<any>();
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
@@ -22,12 +18,11 @@ const CompProgressBar: React.FC<progBarIF> = ({ menuActive }) => {
       document.documentElement.clientHeight;
 
     const scrolled = (winScroll / height) * 100;
-
     setScrollTop(scrolled);
   };
   return (
     <div className="flex flex-row">
-      <CompIndex nPage={tempMenuActive} />
+      <CompIndex />
       <div className="w-1.5 bg-gray-200 fixed ml-[-5px] mt-[90px] h-full mb-4">
         <div
           className="bg-green-600 transition-all ease-out duration-1000"
